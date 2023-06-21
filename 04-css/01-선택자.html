@@ -10,6 +10,50 @@
   <h1>선택자</h1>
 
   <h2>태그 선택자</h2>
+  
+  <div class="wrap">
+    wrap
+    <div class="util">util</div>
+    <header class="header">
+      header
+      <h1 class="logo">
+        <a href="#">logo</a>
+      </h1>
+      <nav class="gnb">
+        nav
+      </nav>
+    </header>
+
+  </div>
+  <!-- 태그이름잡으면 작업하기 힘듬- class이름으로 잡기 -->
+  <style>
+    .wrap {
+      border: 5px solid rgb(255, 0, 0);
+      background: rgb(255, 0, 0);
+    }
+    .util {
+      background: rgba(255, 251, 0, 0.5);
+    }
+    .header {
+      border: 5px solid #f571be;
+    }
+    .logo {
+      background: #000;
+    }
+    .logo a {
+      font-size: 18px;
+      color: white;
+    }
+    .gnb {
+      border: 5px solid rgba(0, 0, 255, 0.5);
+    }
+
+
+  </style>
+  <!-- br은 줄바꿈 -->
+  <br><br><br>
+
+
   <div id="gnb">
     <ul class="depth1">
       <li class="fst">
@@ -61,7 +105,7 @@
       background: #e57fee;
     }
     .depth1 .fst > a {
-      
+      border: 3px solid #51cdf3;
     }
     ul {
       border: 3px solid #000;
