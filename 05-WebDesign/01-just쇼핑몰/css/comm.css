@@ -83,14 +83,32 @@
   justify-content: space-between;
 } */
 .tabs {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
 }
+
 .bnr {
-  width: 402px;
+  width: 400px;
 }
 .bnr a, .bnr img {
   display: block;
 }
 .goto {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
+}
+.goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;
+}
+.goto li {
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  background: #dadada;
+}
+.goto a {
+  display: block;
+  height: 100%;
+  background: #ffa3a3;
 }
