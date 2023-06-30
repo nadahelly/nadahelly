@@ -11,13 +11,11 @@
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  background: #ebe3e3;
 }
 .header {
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background: #ffffff;
 }
 .logo {
   display: flex;
@@ -82,9 +80,82 @@
   display: flex;
   justify-content: space-between;
 } */
-.tabs {
+
+/* tab */
+.tabs-wrap {
+  position: relative;
+  display: flex;
   width: calc(100% / 2 - 230px);
 }
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+/* 비활성화 */
+.tabs-wrap .tab-item .tit {
+  height: 35px;
+  padding-top: 5px;
+  border-bottom: 2px solid black;
+  background: #ecebeb;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+/* 활성화 */
+.tabs-wrap .on .tit {
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  height: 147px;
+  /* background: #ffffff; */
+}
+.tabs-wrap .on .cont {
+  display: block;
+}
+.lst-bbs {
+  padding-top: 8px;
+}
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+}
+.lst-bbs li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-top: -2px;
+  margin-right: 5px;
+  background: #000000;
+}
+.lst-bbs li a {
+  display: block;
+  line-height: 2;
+}
+.lst-bbs li a:hover {
+  text-decoration: underline;
+}
+
+/* 갤러리 */
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+.lst-gallery li {
+  width: 100px;
+}
+.lst-gallery li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 .bnr {
   width: 400px;
@@ -100,7 +171,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 180px;
+  height: 182px;
 }
 .goto li {
   width: calc(50% - 5px);
@@ -110,5 +181,29 @@
 .goto a {
   display: block;
   height: 100%;
-  background: #ffa3a3;
+  background: #daba8a;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #d7d7d7;
+}
+.logo-foot a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.footer .lst-sns {
+  display: flex;
+}
+.lst-sns li {
+  margin-left: 20px;
+}
+.lst-sns a {
+  display: block;
+  line-height: 100px;
+  height: 100px;
+}
+ 
