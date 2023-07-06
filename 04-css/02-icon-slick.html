@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slick | css</title>
+  <link rel="stylesheet" href="./dist/slick-1.8.1/slick.css">
+  <link rel="stylesheet" href="./dist/slick-1.8.1/slick-theme.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      line-height: 1.5;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>slick</h1>
+
+  <div class="sec-slide">
+    <div><img src="https://images.unsplash.com/photo-1688320097436-a20f0b5ba1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="다리"></div>
+    <div><img src="https://images.unsplash.com/photo-1688374459464-67a58cb7707c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="산속"></div>
+    <div><img src="https://images.unsplash.com/photo-1688388906808-184ea1d3366b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="빌딩"></div>
+  </div>
+  
+  <style>
+    .sec-slide {
+      width: 70%;
+      margin: 0 auto;
+    }
+    .sec-slide img {
+      width: 100%;
+    }
+    .slick-prev {
+      left: -20px;
+    }
+    .slick-next {
+      right: -20px;
+    }
+    .slick-prev:hover, .slick-next:hover {
+      background: #6d6c6c;
+    }
+    .slick-arrow {
+      z-index: 100;
+      width: 40px;
+      height: 40px;
+      background: rgb(235, 235, 235);
+      border-radius: 50%;
+    }
+    .slick-arrow:before {
+      font-family: 'Line Awesome Free';
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .slick-prev:before {
+      content: "\f104";
+    }
+    .slick-next:before {
+      content: "\f105";
+    }
+
+
+  </style>
+  
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./dist/slick-1.8.1/slick.min.js"></script>
+  
+  <script>
+  $(document).ready(function(){
+    $('.sec-slide').slick({
+      infinite: true,
+      dots: true
+    });
+  });
+  </script>
+
+</body>
+</html>
