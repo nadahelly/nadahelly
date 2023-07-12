@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>etc | css</title>
+</head>
+<body>
+  <h1>tooltip</h1>
+
+  <div class="tooltip-wrap">
+    tooltip 보기
+    <div class="tooltip-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ea.</div>
+  </div>
+
+  <style>
+    .tooltip-wrap {
+      position: relative;
+      display: inline-block;
+      margin: 100px;
+      font-weight: bold;
+      font-size: 20px;
+      color: rgb(162, 0, 255);
+      background: #56e662;
+    }
+    .tooltip-item {
+      position: absolute;
+      bottom: -230px;
+      left: 50%;
+      /* 글씨만큼 잘라줌 */
+      display: inline-block;
+      max-width: 200px;
+      padding: 5px 10px;
+      font-weight: normal;
+      color: aquamarine;
+      background: #fac9c9;
+      border-radius: 10px;
+      transform: translateX(-50%);
+      /* word-break: break-all; */
+    }
+  </style>
+  
+</body>
+</html>

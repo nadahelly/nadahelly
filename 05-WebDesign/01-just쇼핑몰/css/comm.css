@@ -115,6 +115,15 @@
   position: absolute;
   top: 0;
   left: 0;
+  animation: slide-ani 5s linear alternate infinite ;
+}
+@keyframes slide-ani {
+  0% {top: 0;}
+  30% {top: 0;}
+  39% {top: -300px;}
+  69% {top: -300px;}
+  77% {top: -600px;}
+  100% {top: -600px;}
 }
 
 /* contents */

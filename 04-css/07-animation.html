@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+</head>
+<body>
+
+  <h1>animation</h1>
+  <div class="box1">
+    <div class="ani"></div>
+  </div>
+
+  <style>
+    .box1 {
+      position: relative;
+      height: 500px;
+      background: #ffcbcb;
+    }
+    .ani {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: #a6f88d;
+      animation-name: ani-box;
+      animation-duration: 4s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+    }
+    @keyframes ani-box {
+      /* 같은 속성으로 사용(top,left 썼으면 top,left 로 사용) */
+      0% {background: #a6f88d;top: 0;left: 0;}
+      /* 오른쪽 끝까지 갈때 calc(100% - 네모가로픽셀) 사용 */
+      25% {background: #e5ff71;top: 0;left: calc(100% - 200px);}
+      50% {background: #5dffd7;top: 300px;left: 1000px;}
+      75% {background: #3554ff;top: 300px;left: 0;}
+      100% {background: #ce63ff;top: 0;left: 0;}  
+    }
+  </style>
+  
+  <br><br><br><br><br>
+
+  <div class="box2">
+    <div class="ani-box2"></div>
+    <div class="ani-box3"></div>
+  </div>
+  <style>
+    .box2 {
+      position: relative;
+      height: 700px;
+      border: 3px solid #000;
+    }
+    .ani-box2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 400px;
+      background: #fd5959;
+      opacity: 50%;
+      animation-name: ani-b;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    .ani-box3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #46daff;
+      opacity: 50%;
+      animation-name: ani-b2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      /* 왔던거 되돌아가는거  */
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    @keyframes ani-b {
+      0% {background: #fd5959;top: 1100px;left: 0px;}
+      50% {background: #7affbc;}
+      100% {background: #46daff;top: 0;left: 47%;}
+    }
+    @keyframes ani-b2 {
+      0% {background: #46daff;top: 1100px;left: 1000px;}
+      50% {background: #fdc5ff;}
+      100% {background: #fd5959;top: 300px;left: 52%;}
+    }
+  </style>
+
+<br><br><br><br><br>
+
+
+</body>
+</html>
